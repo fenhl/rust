@@ -2093,7 +2093,6 @@ impl<'a, 'tcx> FnCtxt<'a, 'tcx> {
     {
         debug!("register_predicate({})",
                obligation.repr(self.tcx()));
-
         self.inh.fulfillment_cx
             .borrow_mut()
             .register_predicate_obligation(self.infcx(), obligation);
